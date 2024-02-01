@@ -1,0 +1,21 @@
+.regi-btn{
+    width: 100%;
+}
+
+.password-input{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.input-group {
+    position: relative;
+}
+.eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 0.75rem; /* Adjust the right position as needed */
+    transform: translateY(-50%);
+    cursor: pointer;
+}
