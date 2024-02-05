@@ -2,7 +2,8 @@ import { useContext } from "react";
 import { BsGoogle} from "react-icons/bs";
 
 import { useLocation, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../../providers/AuthProvider";
+import { AuthContext } from "../../../providers/AuthProviders";
+
 
 
 const SocialLogin = () => {

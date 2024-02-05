@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { AuthContext } from '../../../providers/AuthProvider';
+
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Input, Ripple, initTE } from "tw-elements";
 initTE({ Input, Ripple, }, true);
@@ -8,6 +8,7 @@ import login from '../../../assets/login.json';
 import Lottie from "lottie-react";
 import Swal from 'sweetalert2'
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
+import { AuthContext } from '../../../providers/AuthProviders';
 
 const Login = () => {
     const { signIn } = useContext(AuthContext);

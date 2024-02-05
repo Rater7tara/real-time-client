@@ -7,7 +7,8 @@ import {
   useLocation,
 } from "react-router-dom";
 import { router } from './Routes/Routes';
-import AuthProvider from './providers/AuthProvider';
+import AuthProvider from './providers/AuthProviders';
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

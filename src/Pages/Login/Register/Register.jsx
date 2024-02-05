@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { useNavigate, Link, } from 'react-router-dom';
-import { AuthContext } from '../../../providers/AuthProvider';
 import './Register.css';
 import sign from '../../../assets/sign.json';
 import Lottie from "lottie-react";
@@ -8,6 +7,7 @@ import { useForm } from "react-hook-form";
 import Swal from 'sweetalert2'
 import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 import { BsFillEyeSlashFill, BsFillEyeFill } from "react-icons/bs";
+import { AuthContext } from '../../../providers/AuthProviders';
 
 
 const Register = () => {
