@@ -24,7 +24,7 @@ const TaskTable = ({index, task}) => {
                     <td>{completed}</td>
                     <td>{timestamp}</td>
                     <th>
-                        <label onClick={() => handleDetailsModal(_id)} htmlFor="my-modal-5" className="btn bg-purple-500">View details</label>
+                        <label onClick={() => handleDetailsModal(_id)} htmlFor="my-modal-5" className="btn btn-error hover:bg-rose-600 text-white">View Details</label>
                         
                         {/* <Link to={`/singleToy/${_id}`}><label htmlFor="my-modal-5" className="btn bg-purple-500">View details</label>
                         </Link> */}

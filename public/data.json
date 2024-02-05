@@ -3,70 +3,70 @@
       "_id": "1",
       "title": "Morning Yoga",
       "description": "Complete a 20-minute yoga session to start the day.",
-      "completed": false,
+      "completed": "2-3 Months",
       "timestamp": "2024-02-01T08:00:00Z"
     },
     {
       "_id": "2",
       "title": "Hydration Challenge",
       "description": "Drink at least 8 glasses of water throughout the day.",
-      "completed": true,
+      "completed": "3-4 Months",
       "timestamp": "2024-02-01T10:30:00Z"
     },
     {
       "_id": "3",
       "title": "30-Minute Cardio",
       "description": "Engage in a high-intensity cardio workout for 30 minutes.",
-      "completed": false,
+      "completed": "2-3 Months",
       "timestamp": "2024-02-01T15:00:00Z"
     },
     {
       "_id": "4",
       "title": "Healthy Meal Prep",
       "description": "Prepare a nutritious meal with a balance of protein, vegetables, and whole grains.",
-      "completed": true,
+      "completed": "3-4 Months",
       "timestamp": "2024-02-01T18:00:00Z"
     },
     {
       "_id": "5",
       "title": "Evening Meditation",
       "description": "Practice mindfulness with a 10-minute meditation session before bedtime.",
-      "completed": false,
+      "completed": "2-3 Months",
       "timestamp": "2024-02-01T21:30:00Z"
     },
     {
       "_id": "6",
       "title": "Strength Training",
       "description": "Complete a 45-minute strength training session targeting major muscle groups.",
-      "completed": false,
+      "completed": "2-3 Months",
       "timestamp": "2024-02-02T09:00:00Z"
     },
     {
       "_id": "7",
       "title": "Nutrition Check",
       "description": "Assess daily nutritional intake and make adjustments for a balanced diet.",
-      "completed": true,
+      "completed": "3-4 Months",
       "timestamp": "2024-02-02T12:30:00Z"
     },
     {
       "_id": "8",
       "title": "Afternoon Stretch",
       "description": "Take a break to stretch and relax muscles for 15 minutes.",
-      "completed": false,
+      "completed": "2-3 Months",
       "timestamp": "2024-02-02T15:30:00Z"
     },
     {
       "_id": "9",
       "title": "Mindful Breathing",
       "description": "Practice deep and mindful breathing exercises for stress relief.",
-      "completed": true,
+      "completed": "3-4 Months",
       "timestamp": "2024-02-02T18:00:00Z"
     },
     {
       "_id": "10",
       "title": "Sleep Hygiene",
       "description": "Establish a bedtime routine to improve sleep quality.",
-      "completed": false,
+      "completed": "2-3 Months",
       "timestamp": "2024-02-02T22:00:00Z"
     }
   ]

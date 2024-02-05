@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from '../../../assets/logo.jpg';
+import logo from '../../../assets/logo2.png';
 import './NavBar.css';
 import { FaUser } from "react-icons/fa";
 import { useContext } from 'react';
@@ -48,8 +48,8 @@ const NavBar = () => {
               
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case lg:text-xl sm:text-lg">
-            <img className='logo' src={logo} alt="" /><span className='text-white font-bold'>FITNESS</span></a>
+          <a className="ms-5">
+            <img className='logo' src={logo} alt="" /></a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -68,11 +68,11 @@ const NavBar = () => {
           }
           {user ?
 
-            <button onClick={handleLogOut} className="btn btn-info">Logout</button>
+            <button onClick={handleLogOut} className="btn btn-error hover:bg-rose-600 text-white">Logout</button>
 
             :
             <Link to="/login">
-              <button className="btn btn-info">Login</button>
+              <button className="btn btn-error hover:bg-rose-600 text-white">Login</button>
             </Link>
           }
 
