@@ -20,7 +20,7 @@ const NavBar = () => {
       <Link to="/" className='navbtn  rounded-md  hover:bg-rose-500 font-bold text-white text-center p-3 me-2'>Home</Link>
       <Link to="/alltasks" className='navlink rounded-md  hover:bg-rose-500  font-bold text-white text-center p-3 me-2'>All Tasks</Link>
       {user?.email ? <>
-      <Link to="/myTasks" className='navlink rounded-md hover:bg-rose-500  font-bold text-white text-center p-3 me-2'>My Tasks</Link>
+      <Link to="/mytasks" className='navlink rounded-md hover:bg-rose-500  font-bold text-white text-center p-3 me-2'>My Tasks</Link>
       <Link to="/addtasks" className='navlink rounded-md  hover:bg-rose-500  font-bold text-white text-center p-3 me-2'>Add A Task</Link>
       <Link to="" className='navlink rounded-md  hover:bg-rose-500  font-bold text-white text-center p-3 me-2'>Blog</Link>
 
