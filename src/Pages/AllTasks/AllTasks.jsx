@@ -1,40 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import DetailsModal from '../Shared/DetailsModal/DetailsModal';
 
 
 import TaskTable from './TaskTable';
 
 
 const AllTasks = () => {
-    // const task = useLoaderData();
     const [search, setSearch] = useState('');
     const [tasks, setTasks] = useState([]);
-    // const [gym, setGym] = useState([]);
+    const [gym, setGym] = useState([]);
 
     useEffect(() => {
         // Fetch places data from the JSON file
-        fetch('data.json')
+        fetch(`http://localhost:5000/alltask`)
           .then((response) => response.json())
           .then((data) => setTasks(data))
           .catch((error) => console.error('Error fetching data:', error));
       }, []);
 
-    // const handleDetailsModal = (id) =>{
-    //     console.log(id)
-    //     fetch(`https://toy-server-ec7c-du1uro2ur-rater7tara.vercel.app/allToys/${id}`)
-    //     .then((res) => res.json())
-    //     .then((data) => setTasks(data));
+    const handleDetailsModal = (id) =>{
+        console.log(id)
+        fetch(`http://localhost:5000/alltask/${id}`)
+        .then((res) => res.json())
+        .then((data) => setGym(data));
 
-    // }
+    }
 
-    // const handleSearch = () => {
-    //     fetch(`https://toy-server-ec7c-du1uro2ur-rater7tara.vercel.app/allToys/${search}`)
-    //     .then((res) => res.json())
-    //     .then((data) => setTasks(data));
-    // };
+    const handleSearch = () => {
+        fetch(`http://localhost:5000/alltask?search=${search}`)
+            .then((res) => res.json())
+            .then((data) => setTasks(data))
+            .catch((error) => console.error('Error searching tasks:', error));
+    };
 
 
-    // console.log(search);
+    console.log(search);
 
 
     return (
@@ -46,8 +47,8 @@ const AllTasks = () => {
                     <input
                     onChange={(e) => setSearch(e.target.value)}
                     type="search" name="" id="" placeholder='Search...' className='input input-bordered w-1/2'/>
-                    {/* <button onClick={handleSearch}
-                    className='btn btn-primary ms-1'>Search Tasks</button> */}
+                    <button onClick={handleSearch}
+                    className='btn btn-error hover:bg-rose-600 ms-1'>Search Tasks</button>
                 </div>
 
             </div>
@@ -61,12 +62,10 @@ const AllTasks = () => {
                         </th>
                         <th>Title</th>
                         
-                        <th>description</th>
-                        <th>completed</th>
+                        <th>Description</th>
+                        <th>Completed</th>
                         
-                        <th>timestamp</th>
-                        <th>Action</th>
-                        {/* <th>Price</th> */}
+                        <th>Timestamp</th>
                         
                     </tr>
                 </thead>
@@ -77,14 +76,14 @@ const AllTasks = () => {
       key={task._id}
       task={task}
       index={index + 1}
-    //   handleDetailsModal ={handleDetailsModal}
+      handleDetailsModal ={handleDetailsModal}
     ></TaskTable>
   ))
 }
             </table>
             </div>
             <div>
-            {/* <DetailsModal task={task} /> */}
+            <DetailsModal gym={gym} />
             </div>
         </div>
     );

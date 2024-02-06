@@ -1,6 +1,12 @@
 import React from 'react';
+import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 const AddATask = () => {
+    const navigate = useNavigate();
+
+
+
     const handleAddTask = event => {
         event.preventDefault();
 
@@ -10,14 +16,13 @@ const AddATask = () => {
         const timestamp = form.timestamp.value;
         const description = form.description.value;
         const completed = form.completed.value;
-        const photo = form.photo.value;
 
-        const newTask = {title, timestamp, description, completed, photo}
+        const newTask = {title, timestamp, description, completed}
 
         console.log(newTask);
 
         // send data to the server
-        fetch('data.json', {
+        fetch('http://localhost:5000/alltask', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -31,16 +36,20 @@ const AddATask = () => {
                     Swal.fire({
                         title: 'Successfully Added',
                         showClass: {
-                          popup: 'animate__animated animate__fadeInDown'
+                            popup: 'animate__animated animate__fadeInDown'
                         },
                         hideClass: {
-                          popup: 'animate__animated animate__fadeOutUp'
+                            popup: 'animate__animated animate__fadeOutUp'
                         }
-                      })
+                    }).then(() => {
+                        navigate('/mytasks'); 
+                    });
                 }
             })
-
-
+            .catch(error => {
+                console.error('Error:', error);
+                // Handle error
+            });
     }
 
     return (
@@ -86,18 +95,6 @@ const AddATask = () => {
                         </label>
                         <label className="input-group">
                             <input type="text" name="completed" placeholder="completed" className="input input-bordered w-full" />
-                        </label>
-                    </div>
-                </div>
-            
-                {/* form Photo url row */}
-                <div className="mb-6">
-                    <div className="form-control w-full">
-                        <label className="label">
-                            <span className="label-text">Photo URL</span>
-                        </label>
-                        <label className="input-group">
-                            <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered w-full" />
                         </label>
                     </div>
                 </div>

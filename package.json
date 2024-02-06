@@ -24,6 +24,7 @@
     "sort-by": "^1.2.0",
     "source-map-resolve": "^0.6.0",
     "sweetalert2": "^11.10.4",
+    "three": "^0.161.0",
     "tw-elements": "^1.1.0"
   },
   "devDependencies": {

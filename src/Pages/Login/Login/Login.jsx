@@ -87,7 +87,7 @@ const Login = () => {
                                     </label>
                                 </div>
                                 <div className="form-control mt-6">
-                                    <button className="btn btn-info">Login</button>
+                                    <button className="btn btn-error">Login</button>
                                     <div
                                         className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
                                         <p

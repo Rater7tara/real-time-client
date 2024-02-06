@@ -22,13 +22,15 @@ const NavBar = () => {
       {user?.email ? <>
       <Link to="/mytasks" className='navlink rounded-md hover:bg-rose-500  font-bold text-white text-center p-3 me-2'>My Tasks</Link>
       <Link to="/addtasks" className='navlink rounded-md  hover:bg-rose-500  font-bold text-white text-center p-3 me-2'>Add A Task</Link>
-      <Link to="" className='navlink rounded-md  hover:bg-rose-500  font-bold text-white text-center p-3 me-2'>Blog</Link>
+      
 
       </>
              :
             <Link to="/login">
             </Link>
           }
+
+<Link to="" className='navlink rounded-md  hover:bg-rose-500  font-bold text-white text-center p-3 me-2'>Blog</Link>
       
     </>
 
@@ -42,7 +44,7 @@ const NavBar = () => {
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
             </label>
-            <ul tabIndex={0} className="menu menu-sm  dropdown-content  z-[1] mt-2 p-2 shadow bg-base-700 rounded-box w-36 gap-2">
+            <ul tabIndex={0} className="menu menu-sm  dropdown-content  z-[1] mt-2 p-2 shadow bg-rose-400 rounded-box w-36 gap-2 text-black">
               
               {navOptions}
               

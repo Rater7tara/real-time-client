@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const TaskTable = ({index, task}) => {
+const TaskTable = ({index, handleDetailsModal, task}) => {
     const { title, timestamp, description, completed, 
     _id } = task;
     return (
@@ -12,33 +13,16 @@ const TaskTable = ({index, task}) => {
                        {index}
                     </th>
                     <td>
-                        <div className="flex items-center space-x-3">
-                            <div>
-                                <div className="font-bold">{title}</div>
-                            </div>
-                        </div>
+                        <span className='font-bold'>{title}</span>
+                    
                     </td>
                     <td>
                     {description}
                     </td>
                     <td>{completed}</td>
                     <td>{timestamp}</td>
-                    <th>
-                        <label onClick={() => handleDetailsModal(_id)} htmlFor="my-modal-5" className="btn btn-error hover:bg-rose-600 text-white">View Details</label>
-                        
-                        {/* <Link to={`/singleToy/${_id}`}><label htmlFor="my-modal-5" className="btn bg-purple-500">View details</label>
-                        </Link> */}
-
-                    </th>
                 </tr>
             </tbody>
-
-            <div>
-            
-
-                
-            
-            </div>
         </>
     );
 };

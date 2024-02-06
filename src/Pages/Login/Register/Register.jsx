@@ -125,7 +125,7 @@ const Register = () => {
                                 </div>
 
 
-                                <input type="submit" value="Sign Up" className="btn btn-info btn-block" />
+                                <input type="submit" value="Sign Up" className="btn btn-error btn-block" />
 
                                 <div className=" mt-4">
                                     <span className='text-centered mb-4'>Already Have an Account?</span><br /> <Link to='/login' className='btn btn-primary w-full mt-4'>Login</Link>

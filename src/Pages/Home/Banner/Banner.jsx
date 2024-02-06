@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Slide } from "react-awesome-reveal";
 
 const backgrounds = [
-    "url(https://i.ibb.co/sv4htRb/banner-bg-1.jpg)",
+    "url(https://iili.io/J1Htd2s.jpg)",
     "url(https://i.ibb.co/bmfP0Zg/banner-bg-2.jpg)",
   ];
 
@@ -42,12 +42,12 @@ const Banner = () => {
       </h1>
       </Slide>
             <p className="text-[#b8b8b8] font-kanit ">
-              Unleash your inner strength and embrace the art of mastery with our Karate training program. Join us on a journey of discipline, focus, and self-defense techniques, guided by experienced instructors.
+            Transform your fitness journey with our dynamic gym website. Discover a range of personalized training programs tailored to your goals, led by expert coaches. Whether you're looking to build strength, improve endurance, or enhance flexibility, our inclusive community and state-of-the-art facilities provide the perfect environment for you to thrive.
             </p>
             <div className="flex gap-4">
               {/* <button className="my-btn-fill">Contract Us</button> */}
-              <button name="Contract Us"></button>
-              <button className="my-btn text-white">More About Us</button>
+              <button className="btn bg-base-200">Contract Us</button>
+              <button className="btn btn-error text-white">More About Us</button>
             </div>
           </div>
         </div>
